@@ -848,6 +848,7 @@ PRODUCT_PACKAGES += \
     libGPreqcancel \
     libGPreqcancel_svc \
     libI420colorconvert \
+    libMegviiFacepp-0.5.2 \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -958,6 +959,7 @@ PRODUCT_PACKAGES += \
     liblqe \
     libmctfengine_stub \
     libmdsprpc \
+    libmegface_xiaomi \
     libmi-stc-HW-modulate \
     libmiStereoFactoryRemapBasicLib \
     libmiXmlParser \
