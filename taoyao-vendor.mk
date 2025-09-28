@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc \
     vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc \
+    vendor/xiaomi/taoyao/proprietary/product/etc/device_features/taoyao.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/taoyao.xml \
     vendor/xiaomi/taoyao/proprietary/system/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml \
     vendor/xiaomi/taoyao/proprietary/system/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml \
     vendor/xiaomi/taoyao/proprietary/system/etc/permissions/vendor.xiaomi.hardware.misys-V4.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V4.0-java-permission.xml \
@@ -209,7 +210,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/xiaomi/taoyao/proprietary/vendor/etc/init/android.hardware.camera.provider@2.4-virtual-camera-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.4-virtual-camera-service.rc \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -502,9 +502,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@2.0 \
     vendor.xiaomi.hardware.misys@3.0 \
     vendor.xiaomi.hardware.misys@4.0 \
-    libcamera_algoup_jni.xiaomi \
-    libcamera_mianode_jni.xiaomi \
-    libmicampostproc_client \
     vendor.xiaomi.hardware.campostproc@1.0 \
     eglSubDriverAndroid \
     libEGL_adreno \
@@ -529,10 +526,6 @@ PRODUCT_PACKAGES += \
     libcapiv2vop \
     libcdsprpc \
     libcheckpid \
-    libcom.xiaomi.debug \
-    libcom.xiaomi.grallocutils \
-    libcom.xiaomi.metadatautils \
-    libcom.xiaomi.pluginutils \
     libconfigdb \
     libcvp2_1 \
     libcvp_common \
@@ -547,7 +540,6 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     liblogwrap_vendor \
     libmdmdetect \
-    libmialgoengine \
     libmicuttlefish_fs \
     libmicuttlefish_utils \
     libmivsock_utils \
@@ -594,6 +586,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@4.0_vendor \
     btaudio_offload_if \
     audio.primary.lahaina \
+    sound_trigger.primary.lahaina \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     libFileMux_proprietary \
     liba2dpoffload \
@@ -659,17 +652,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     libxlog \
-    android.hardware.camera.provider@2.4-external \
-    android.hardware.camera.provider@2.4-legacy \
     android.hardware.secure_element@1.0-impl \
-    camera.device@1.0-impl \
-    camera.device@3.2-impl \
-    camera.device@3.3-impl \
-    camera.device@3.4-external-impl \
-    camera.device@3.4-impl \
-    camera.device@3.5-external-impl \
-    camera.device@3.5-impl \
-    camera.device@3.6-external-impl \
     com.qti.actuator.taoyao_ofilm_s5kgd2_dw9714v_front \
     com.qti.actuator.taoyao_ofilm_s5khm2_dw9800_wide \
     com.qti.actuator.taoyao_semco_s5khm2_dw9800_wide \
@@ -826,8 +809,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
     android.hardware.bluetooth@1.0-impl-qti \
-    android.hardware.camera.provider@2.4-impl-vcamera \
-    android.hardware.camera.provider@2.4-impl \
     android.hardware.gatekeeper@1.0-impl-qti \
     camera.qcom \
     camera.xiaomi \
@@ -866,7 +847,7 @@ PRODUCT_PACKAGES += \
     libGPTEE_vendor \
     libGPreqcancel \
     libGPreqcancel_svc \
-    libMegviiFacepp-0.5.2 \
+    libI420colorconvert \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -927,6 +908,10 @@ PRODUCT_PACKAGES += \
     libcneapiclient \
     libcneoplookup \
     libcom.qti.chinodeutils \
+    libcom.xiaomi.debug \
+    libcom.xiaomi.grallocutils \
+    libcom.xiaomi.metadatautils \
+    libcom.xiaomi.pluginutils \
     libcpion \
     libcvface_api \
     libcvpcpuRev_skel \
@@ -973,7 +958,6 @@ PRODUCT_PACKAGES += \
     liblqe \
     libmctfengine_stub \
     libmdsprpc \
-    libmegface_xiaomi \
     libmi-stc-HW-modulate \
     libmiStereoFactoryRemapBasicLib \
     libmiXmlParser \
@@ -990,6 +974,7 @@ PRODUCT_PACKAGES += \
     libmialgo_utils \
     libmialgo_video_colourkeeping \
     libmialgo_video_seg \
+    libmialgoengine \
     libmibokeh_855 \
     libmibokeh_mask \
     libmibokeh_mask_dsp \
@@ -1169,7 +1154,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.cacert@1.0 \
-    vendor.qti.hardware.camera.device@3.5 \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
@@ -1346,7 +1330,6 @@ PRODUCT_PACKAGES += \
     vendor.dolby_sp.hardware.dmssp@2.0-impl \
     vendor.dolby_sp.hardware.dmssp@2.0 \
     vendor.dolby_v3_6.hardware.dms360@2.0-impl \
-    MiuiCamera \
     CACertService \
     CneApp \
     IWlanService \
@@ -1361,6 +1344,7 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
+    camerax-vendor-extensions \
     tcmclient \
     vendor.xiaomi.hardware.misys-V1.0-java \
     vendor.xiaomi.hardware.misys-V2.0-java \
@@ -1396,7 +1380,6 @@ PRODUCT_PACKAGES += \
     dpmQmiMgr \
     dspservice \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.camera.provider@2.4-virtual-camera-service \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.dumpstate@1.1-service.xiaomi \
     android.hardware.gatekeeper@1.0-service-qti \
@@ -1465,4 +1448,5 @@ PRODUCT_PACKAGES += \
     vendor.dolby_v3_6.hardware.dms360@2.0-service
 
 PRODUCT_BOOT_JARS += \
-    WfdCommon
+    WfdCommon \
+    camerax-vendor-extensions
