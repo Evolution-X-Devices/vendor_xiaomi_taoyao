@@ -383,6 +383,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/taoyao/proprietary/vendor/etc/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/CAMERA_ICP_170.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_170.elf \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion1_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion1_RTP.bin \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion2_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion2_RTP.bin \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion3_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion3_RTP.bin \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion4_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion4_RTP.bin \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion_Aurora_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion_Aurora_RTP.bin \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/FOD_Motion_Planet_RTP.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/FOD_Motion_Planet_RTP.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/a660_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_gmu.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/a660_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_sqe.fw \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/a660_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a660_zap.b00 \
@@ -435,6 +441,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/evass.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b19 \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/evass.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mbn \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/evass.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mdt \
+    vendor/xiaomi/taoyao/proprietary/vendor/firmware/fingerprint_record_rtp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerprint_record_rtp.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/focaltech_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/goodix_cfg_group_l9.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_l9.bin \
     vendor/xiaomi/taoyao/proprietary/vendor/firmware/goodix_firmware_l9.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_l9.bin \
