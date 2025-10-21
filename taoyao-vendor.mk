@@ -509,7 +509,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@2.0 \
     vendor.xiaomi.hardware.misys@3.0 \
     vendor.xiaomi.hardware.misys@4.0 \
-    vendor.xiaomi.hardware.campostproc@1.0 \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -581,6 +580,9 @@ PRODUCT_PACKAGES += \
     libvpplibrary \
     libxml \
     libmisoundfx \
+    libqcbassboost \
+    libqcreverb \
+    libqcvirt \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.qconfig@1.0 \
     vendor.qti.hardware.vpp@1.1 \
