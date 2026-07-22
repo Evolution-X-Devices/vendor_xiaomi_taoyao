@@ -12609,7 +12609,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so",
             ],
             shared_libs: [
-                "citsensorservice_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libutils",
