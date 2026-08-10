@@ -26944,39 +26944,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.dumpstate@1.1-service.xiaomi",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.dumpstate@1.1-service.xiaomi",
-            ],
-            shared_libs: [
-                "android.hardware.dumpstate@1.1",
-                "android.hardware.dumpstate@1.0",
-                "libbase",
-                "libcutils",
-                "libdumpstateutil",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "android.hardware.gatekeeper@1.0-service-qti",
     owner: "xiaomi",
     target: {
