@@ -6,10 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/taoyao
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/taoyao/proprietary/odm/etc/dolby/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml \
-    vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
-    vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc \
-    vendor/xiaomi/taoyao/proprietary/odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc \
     vendor/xiaomi/taoyao/proprietary/product/etc/device_features/taoyao.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/device_features/taoyao.xml \
     vendor/xiaomi/taoyao/proprietary/system/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml \
     vendor/xiaomi/taoyao/proprietary/system/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml \
@@ -521,6 +517,10 @@ PRODUCT_PACKAGES += \
     libcapiv2vop \
     libcdsprpc \
     libcheckpid \
+    libcom.xiaomi.debug \
+    libcom.xiaomi.grallocutils \
+    libcom.xiaomi.metadatautils \
+    libcom.xiaomi.pluginutils \
     libconfigdb \
     libcvp2_1 \
     libcvp_common \
@@ -535,6 +535,7 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     liblogwrap_vendor \
     libmdmdetect \
+    libmialgoengine \
     libmicuttlefish_fs \
     libmicuttlefish_utils \
     libmivsock_utils \
@@ -874,10 +875,6 @@ PRODUCT_PACKAGES += \
     libcneapiclient \
     libcneoplookup \
     libcom.qti.chinodeutils \
-    libcom.xiaomi.debug \
-    libcom.xiaomi.grallocutils \
-    libcom.xiaomi.metadatautils \
-    libcom.xiaomi.pluginutils \
     libcpion \
     libcvface_api \
     libcvpcpuRev_skel \
@@ -941,7 +938,6 @@ PRODUCT_PACKAGES += \
     libmialgo_utils \
     libmialgo_video_colourkeeping \
     libmialgo_video_seg \
-    libmialgoengine \
     libmibokeh_855 \
     libmibokeh_mask \
     libmibokeh_mask_dsp \
@@ -1254,27 +1250,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.xiaomi.hardware.displayfeature@1.0 \
-    libdapparamstorage_v3_6 \
-    libdeccfg_v3_6 \
-    libdlbdsservice_v3_6 \
-    vendor.dolby_v3_6.hardware.dms360@2.0 \
-    libstagefright_soft_ddpdec \
-    libhwdap_v3_6 \
-    libswdap_v3_6 \
-    libcodec2_hidl@1.0_sp \
-    libcodec2_hidl_plugin_sp \
-    libcodec2_soft_ac4dec_sp \
-    libcodec2_soft_common_sp \
-    libcodec2_soft_ddpdec_sp \
-    libcodec2_store_dolby_sp \
-    libcodec2_vndk_sp \
-    libdapparamstorage_sp \
-    libdeccfg_sp \
-    libdlbdsservice_sp \
-    libui_sp \
-    vendor.dolby_sp.hardware.dmssp@2.0-impl \
-    vendor.dolby_sp.hardware.dmssp@2.0 \
-    vendor.dolby_v3_6.hardware.dms360@2.0-impl \
     CACertService \
     CneApp \
     IWlanService \
@@ -1310,8 +1285,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@2.0.xml \
     vendor.xiaomi.hardware.misys@3.0.xml \
     vendor.xiaomi.hardware.misys@4.0.xml \
-    manifest_dax_dolby_v3_6.xml \
-    vendor.dolby.hardware.dms.xml \
     adpl \
     adsprpcd \
     batterysecret \
@@ -1381,10 +1354,7 @@ PRODUCT_PACKAGES += \
     time_daemon \
     vppservice \
     xtra-daemon \
-    dpmd \
-    vendor.dolby_sp.hardware.dmssp@2.0-service \
-    vendor.dolby_sp.media.c2@1.0-service \
-    vendor.dolby_v3_6.hardware.dms360@2.0-service
+    dpmd
 
 PRODUCT_BOOT_JARS += \
     camerax-vendor-extensions
